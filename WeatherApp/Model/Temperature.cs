@@ -9,7 +9,7 @@ namespace WeatherApp.Model
         public Range Minimum
         {
             get { return minimum; }
-            set { minimum = value; OnPropertyChanged()}
+            set { minimum = value; OnPropertyChanged(); }
         }
 
         private Range maximum;

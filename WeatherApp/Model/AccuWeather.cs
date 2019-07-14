@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,16 +8,34 @@ using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class AccuWeather : PropertyChangedBase
+    public class AccuWeather
     {
-        private List<DailyForecast> dailyForecasts = null;
-        public List<DailyForecast> DailyForecasts
+        public List<DailyForecast> DailyForecasts { get; set; }
+
+        public AccuWeather()
         {
-            get => dailyForecasts;
-            set
+            if (DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()))
             {
-                dailyForecasts = value;
-                OnPropertyChanged();
+                DailyForecasts = new List<DailyForecast>();
+                for (int i = 0; i < 3; i++)
+                {
+                    DailyForecast dailyForecast = new DailyForecast
+                    {
+                        Date = DateTime.Now.AddDays(-i),
+                        Temperature = new Temperature
+                        {
+                            Maximum = new Range
+                            {
+                                Value = 21 + i
+                            },
+                            Minimum = new Range
+                            {
+                                Value = 5 - i
+                            }
+                        }
+                    };
+                    DailyForecasts.Add(dailyForecast);
+                }
             }
         }
     }
