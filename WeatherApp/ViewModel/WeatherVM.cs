@@ -10,13 +10,17 @@ namespace WeatherApp.ViewModel
 {
     public class WeatherVM : PropertyChangedBase
     {
-        private AccuWeather weather;
+        public AccuWeather Weather { get; set; }
 
-        public AccuWeather Weather
+        private string query;
+
+        public string Query
         {
-            get { return weather; }
-            set { weather = value; OnPropertyChanged(); }
+            get { return query; }
+            set { query = value; OnPropertyChanged(); }
         }
+
+
 
         public WeatherVM()
         {

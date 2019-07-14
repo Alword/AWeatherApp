@@ -16,7 +16,7 @@
 
     <Grid DataContext="{StaticResource vm}">
         <StackPanel Margin="10">
-            <TextBox />
+            <TextBox Text="{Binding Source={StaticResource vm}, Path=Query,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock Text="TulaText"
                        Margin="0 20 0 0"
                        FontSize="20"

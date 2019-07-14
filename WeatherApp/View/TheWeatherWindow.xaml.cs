@@ -29,7 +29,7 @@ namespace WeatherApp.View
 
         private async void GetWeather()
         {
-            var weather = await WeatherApi.GetWeatherInformation();
+            //var weather = await WeatherApi.GetCity();
         }
     }
 }
