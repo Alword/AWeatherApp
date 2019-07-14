@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp.View"
         mc:Ignorable="d"
-        Title="TheWeatherWindow" Height="450" Width="800">
+        Title="TheWeatherWindow" Height="450" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#555555"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <StackPanel Margin="10">
+            <TextBox />
+            <TextBlock Text="Tula"
+                       Margin="0 20 0 0"
+                       FontSize="20"
+                       FontWeight="Bold"/>
+
+            <ListView Margin="0 30 0 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Date"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                            <TextBlock Text="Minimum"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                            <TextBlock Text="Maximum"
+                                       FontSize="20"
+                                       FontWeight="Bold"/>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackPanel>
     </Grid>
 </Window>
