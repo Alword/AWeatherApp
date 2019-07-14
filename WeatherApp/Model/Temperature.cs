@@ -1,14 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class Temperature
+    public class Temperature : ProperyChangedBase
     {
-        public Range Minimum { get; set; }
-        public Range Maximum { get; set; }
+        private Range minimum;
+
+        public Range Minimum
+        {
+            get { return minimum; }
+            set { minimum = value; OnPropertyChanged()}
+        }
+
+        private Range maximum;
+
+        public Range Maximum
+        {
+            get { return maximum; }
+            set { maximum = value; OnPropertyChanged(); }
+        }
+
     }
 }

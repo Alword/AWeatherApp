@@ -1,15 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using WeatherApp.Abstraction;
 namespace WeatherApp.Model
 {
-    public class TimeOfDay
+    public class TimeOfDay : ProperyChangedBase
     {
-        public int Icon { get; set; }
-        public string IconPhrase { get; set; }
-        public bool HasPrecipitation { get; set; }
+        private int icon;
+
+        public int Icon
+        {
+            get { return icon; }
+            set { icon = value; OnPropertyChanged(); }
+        }
+
+        private string iconPhrase;
+
+        public string IconPhrase
+        {
+            get { return iconPhrase; }
+            set { iconPhrase = value; OnPropertyChanged(); }
+        }
+
+        private bool hasPrecipitation;
+
+        public bool HasPrecipitation
+        {
+            get { return hasPrecipitation; }
+            set { hasPrecipitation = value; OnPropertyChanged(); }
+        }
     }
 }

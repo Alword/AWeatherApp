@@ -1,15 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class Range
+    public class Range : ProperyChangedBase
     {
-        public double Value { get; set; }
-        public string Unit { get; set; }
-        public int UnitType { get; set; }
+        private double value;
+
+        public double Value
+        {
+            get { return value; }
+            set { this.value = value; OnPropertyChanged(); }
+        }
+
+        private string unit;
+
+        public string Unit
+        {
+            get { return unit; }
+            set { unit = value; OnPropertyChanged(); }
+        }
+
+        private int unitType;
+
+        public int UnitType
+        {
+            get { return unitType; }
+            set { unitType = value; OnPropertyChanged(); }
+        }
     }
 }
