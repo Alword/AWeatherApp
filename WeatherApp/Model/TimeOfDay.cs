@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Model
 {
-    public class Day
+    public class TimeOfDay
     {
         public int Icon { get; set; }
         public string IconPhrase { get; set; }

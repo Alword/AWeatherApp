@@ -8,7 +8,7 @@ namespace WeatherApp.Model
 {
     public class Temperature
     {
-        public TempratureData Minimum { get; set; }
-        public TempratureData Maximum { get; set; }
+        public Range Minimum { get; set; }
+        public Range Maximum { get; set; }
     }
 }

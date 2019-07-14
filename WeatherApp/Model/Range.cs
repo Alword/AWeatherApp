@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Model
 {
-    public class Night
+    public class Range
     {
-        public int Icon { get; set; }
-        public string IconPhrase { get; set; }
-        public bool HasPrecipitation { get; set; }
+        public double Value { get; set; }
+        public string Unit { get; set; }
+        public int UnitType { get; set; }
     }
 }

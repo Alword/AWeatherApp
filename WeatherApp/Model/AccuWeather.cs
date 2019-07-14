@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Model
 {
-    public class TempratureData
+    public class AccuWeather
     {
-        public double Value { get; set; }
-        public string Unit { get; set; }
-        public int UnitType { get; set; }
+        public Headline Headline { get; set; }
+        public IList<DailyForecast> DailyForecasts { get; set; }
     }
 }
