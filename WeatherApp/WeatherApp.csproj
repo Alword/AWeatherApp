@@ -58,6 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Compile Include="Abstraction\ProperyChangedBase.cs" />
+    <Compile Include="Model\Area.cs" />
+    <Compile Include="Model\City.cs" />
     <Compile Include="ViewModel\WeatherApi.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
