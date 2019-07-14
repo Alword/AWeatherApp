@@ -13,8 +13,5 @@ namespace WeatherApp.Model
         public Temperature Temperature { get; set; }
         public TimeOfDay Day { get; set; }
         public TimeOfDay Night { get; set; }
-        public IList<string> Sources { get; set; }
-        public string MobileLink { get; set; }
-        public string Link { get; set; }
     }
 }

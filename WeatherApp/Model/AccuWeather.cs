@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class AccuWeather
+    public class AccuWeather : ProperyChangedBase
     {
-        public Headline Headline { get; set; }
-        public IList<DailyForecast> DailyForecasts { get; set; }
+        private List<DailyForecast> dailyForecasts = null;
+        public List<DailyForecast> DailyForecasts
+        {
+            get => dailyForecasts;
+            set
+            {
+                dailyForecasts = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

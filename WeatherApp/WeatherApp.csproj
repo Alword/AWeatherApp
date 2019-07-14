@@ -57,6 +57,7 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="Abstraction\ProperyChangedBase.cs" />
     <Compile Include="ViewModel\WeatherApi.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -70,7 +71,6 @@
     <Compile Include="Model\DailyForecast.cs" />
     <Compile Include="Model\TimeOfDay.cs" />
     <Compile Include="Model\AccuWeather.cs" />
-    <Compile Include="Model\Headline.cs" />
     <Compile Include="Model\Temperature.cs" />
     <Compile Include="Model\Range.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
