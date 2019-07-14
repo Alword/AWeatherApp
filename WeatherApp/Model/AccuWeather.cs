@@ -7,7 +7,7 @@ using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class AccuWeather : ProperyChangedBase
+    public class AccuWeather : PropertyChangedBase
     {
         private List<DailyForecast> dailyForecasts = null;
         public List<DailyForecast> DailyForecasts

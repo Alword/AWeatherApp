@@ -7,7 +7,7 @@ using WeatherApp.Abstraction;
 
 namespace WeatherApp.Model
 {
-    public class DailyForecast : ProperyChangedBase
+    public class DailyForecast : PropertyChangedBase
     {
         private DateTime date;
 

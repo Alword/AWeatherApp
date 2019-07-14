@@ -2,7 +2,7 @@
 
 namespace WeatherApp.Model
 {
-    public class Temperature : ProperyChangedBase
+    public class Temperature : PropertyChangedBase
     {
         private Range minimum;
 

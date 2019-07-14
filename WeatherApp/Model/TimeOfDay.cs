@@ -1,7 +1,7 @@
 ﻿using WeatherApp.Abstraction;
 namespace WeatherApp.Model
 {
-    public class TimeOfDay : ProperyChangedBase
+    public class TimeOfDay : PropertyChangedBase
     {
         private int icon;
 

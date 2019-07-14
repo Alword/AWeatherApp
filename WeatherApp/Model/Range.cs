@@ -2,7 +2,7 @@
 
 namespace WeatherApp.Model
 {
-    public class Range : ProperyChangedBase
+    public class Range : PropertyChangedBase
     {
         private double value;
 

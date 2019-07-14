@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Abstraction
 {
-    public abstract class ProperyChangedBase : INotifyPropertyChanged
+    public abstract class PropertyChangedBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string propertyName = "")
