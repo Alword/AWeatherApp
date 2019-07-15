@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +18,30 @@ namespace WeatherApp.ViewModel
         public string Query
         {
             get { return query; }
-            set { query = value; OnPropertyChanged(); }
+            set
+            {
+                query = value;
+                GetCities();
+                OnPropertyChanged();
+            }
         }
 
-
+        public ObservableCollection<City> Cities { get; set; }
 
         public WeatherVM()
         {
             Weather = new AccuWeather();
+            Cities = new ObservableCollection<City>();
+        }
+
+        private async void GetCities()
+        {
+            Cities.Clear();
+            List<City> cities = await WeatherApi.GetAutoComplete(Query);
+            foreach (City city in cities)
+            {
+                Cities.Add(city);
+            }
         }
     }
 }

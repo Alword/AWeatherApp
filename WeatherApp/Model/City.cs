@@ -1,4 +1,5 @@
-﻿using WeatherApp.Abstraction;
+﻿using System.ComponentModel;
+using WeatherApp.Abstraction;
 namespace WeatherApp.Model
 {
     public class City : PropertyChangedBase
