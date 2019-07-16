@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using WeatherApp.Abstraction;
 using WeatherApp.Model;
+using WeatherApp.ViewModel.Commands;
 
 namespace WeatherApp.ViewModel
 {
@@ -38,12 +40,14 @@ namespace WeatherApp.ViewModel
         public ObservableCollection<City> Cities { get; set; }
         public ObservableCollection<DailyForecast> DailyForecasts { get; set; }
 
+        public ICommand RefreshCommand { get; set; }
         public WeatherVM()
         {
             Weather = new AccuWeather();
             Cities = new ObservableCollection<City>();
             SelectedCity = new City();
             DailyForecasts = new ObservableCollection<DailyForecast>();
+            RefreshCommand = new RefreshCommand(this);
         }
 
         private async void GetCities()
@@ -58,7 +62,7 @@ namespace WeatherApp.ViewModel
             }
         }
 
-        private async void GetWeather()
+        public async void GetWeather()
         {
             if (selectedCity.Equals(null) || string.IsNullOrEmpty(selectedCity.Key)) return;
             var weather = await WeatherApi.GetWeatherInformation(selectedCity.Key);

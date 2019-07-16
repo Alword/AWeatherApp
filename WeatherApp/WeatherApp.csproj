@@ -60,6 +60,7 @@
     <Compile Include="Abstraction\ProperyChangedBase.cs" />
     <Compile Include="Model\Area.cs" />
     <Compile Include="Model\City.cs" />
+    <Compile Include="ViewModel\Commands\RefreshCommand.cs" />
     <Compile Include="ViewModel\WeatherApi.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
