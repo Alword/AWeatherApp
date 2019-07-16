@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp.View"
         xmlns:vm="clr-namespace:WeatherApp.ViewModel"
+        xmlns:converters="clr-namespace:WeatherApp.ViewModel.Converters"
         mc:Ignorable="d"
         Title="TheWeatherWindow" Height="450" Width="300">
     <Window.Resources>
@@ -12,6 +13,7 @@
             <Setter Property="Foreground" Value="#555555"></Setter>
         </Style>
         <vm:WeatherVM x:Key="vm"/>
+        <converters:UVToStringConverter x:Key="uvToStringConverter"/>
     </Window.Resources>
 
     <Grid DataContext="{StaticResource vm}">
